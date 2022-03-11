@@ -30,13 +30,13 @@ function sendEmail()
 
             try {
                 //Server settings
-                $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                $mail->SMTPDebug = 2;                      //Enable verbose debug output
                 $mail->isSMTP(false);                                            //Send using SMTP
                 $mail->Host       = '192.168.2.8';                     //Set the SMTP server to send through
                 $mail->SMTPAuth   = false;                                   //Enable SMTP authentication
                 $mail->Username   = 'jgomez@martechmedical.com';                     //SMTP username
                 $mail->Password   = 'joseLuis15!';                               //SMTP password
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+                $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
                 $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                 $mail->SMTPOptions = array(
