@@ -37,7 +37,7 @@ function sendEmail()
                 $mail->Username   = 'jgomez@martechmedical.com';                     //SMTP username
                 $mail->Password   = 'joseLuis15!';                               //SMTP password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-                $mail->Port       = 25;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                 $mail->SMTPOptions = array(
                     'ssl'=>array(
@@ -66,9 +66,25 @@ function sendEmail()
                 $mail->AltBody = "Description: $title------$content---------$category";
 
                 $mail->send();
-                echo 'Message has been sent';
+                echo "
+            <script>
+                    Swal.fire({
+                      title: 'Message',
+                      text: 'Your message was sent.',
+                      icon: 'success',
+                    })
+            </script>
+            ";
             } catch (Exception $e) {
-                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                echo "
+            <script>
+                    Swal.fire({
+                      title: 'Message',
+                      text: 'Message could not be delivered, but it was saved.',
+                      icon: 'error',
+                    })
+            </script>
+            ";
             }
         }
     }
