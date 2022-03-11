@@ -30,7 +30,7 @@ function sendEmail()
 
             try {
                 //Server settings
-                $mail->SMTPDebug = 2;                      //Enable verbose debug output
+                $mail->SMTPDebug = 0;                      //Enable verbose debug output
                 $mail->isSMTP(false);                                            //Send using SMTP
                 $mail->Host       = '192.168.2.8';                     //Set the SMTP server to send through
                 $mail->SMTPAuth   = false;                                   //Enable SMTP authentication
