@@ -415,15 +415,15 @@
     <!-- Applications -->
     <div class="menu-detail" data-menu="applications">
         <div class="menu-detail-wrapper">
-            <a href="applications-media-library.html">
+            <a href="index.php?page=daily_report">
                 <span class="la la-check-circle-o"></span>
                 Daily Report
             </a>
-            <a href="applications-point-of-sale.html">
+            <a href="#">
                 <span class="la la-check-circle"></span>
                 Custom Report
             </a>
-            <a href="applications-to-do.html">
+            <a href="#">
                 <span class="la la-check-circle"></span>
                 Charts
             </a>

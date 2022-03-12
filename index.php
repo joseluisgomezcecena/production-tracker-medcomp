@@ -18,8 +18,8 @@ if ($login->isUserLoggedIn() == true)
             include("views/pages/line_config/index.php");
             break;
 
-        case "custom_report":
-            include ("views/pages/reports/custom_report.php");
+        case "daily_report":
+            include("views/pages/reports/daily_report.php");
             break;
 
         default:
