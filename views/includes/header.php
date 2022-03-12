@@ -22,6 +22,12 @@
     <link rel="apple-touch-icon" href="./views/assets/images/favicon/favicon-180.png" sizes="180x180">
 
     <link rel="stylesheet" href="./views/assets/css/style.css" />
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+
+
+
     <script src="./views/assets/js/sweetalert.js"></script>
 
 </head>
@@ -410,11 +416,11 @@
     <div class="menu-detail" data-menu="applications">
         <div class="menu-detail-wrapper">
             <a href="applications-media-library.html">
-                <span class="la la-image"></span>
+                <span class="la la-check-circle-o"></span>
                 Daily Report
             </a>
             <a href="applications-point-of-sale.html">
-                <span class="la la-shopping-bag"></span>
+                <span class="la la-check-circle"></span>
                 Custom Report
             </a>
             <a href="applications-to-do.html">

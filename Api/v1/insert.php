@@ -11,6 +11,16 @@ if(!empty($_GET['site']) && !empty($_GET['value']))
     $value = $_GET['value'];
     $time_slot = date("H");
 
+    if($site = '1')
+    {
+        $site = 1037;
+    }
+
+    if($site = '2')
+    {
+        $site = 1038;
+    }
+
     $query_check = "SELECT * FROM item_counter 
     WHERE time_slot = $time_slot 
     AND site_id = $site 
