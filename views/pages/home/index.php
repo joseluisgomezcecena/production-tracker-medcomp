@@ -45,7 +45,7 @@ require_once ("functions/mail.php");
                         $today = date("Y-m-d");
                         $query_a = "SELECT SUM(count) FROM item_counter 
                         WHERE 
-                        site_id= 1 
+                        site_id= 1037 
                         AND date_create BETWEEN '$today 00:00:00' AND '$today 23:59:59'; ";
 
                         $result_a = mysqli_query($connection, $query_a);
