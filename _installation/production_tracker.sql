@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2022 at 10:57 PM
+-- Generation Time: Mar 15, 2022 at 12:28 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.23
 
@@ -82,19 +82,9 @@ CREATE TABLE `item_counter` (
   `site_id` int(11) NOT NULL,
   `count` int(11) NOT NULL,
   `time_slot` int(11) NOT NULL,
-  `date_create` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `date_update` timestamp NOT NULL DEFAULT current_timestamp()
+  `date_updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `date_create` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `item_counter`
---
-
-INSERT INTO `item_counter` (`id`, `site_id`, `count`, `time_slot`, `date_create`, `date_update`) VALUES
-(9, 1, 10, 3, '2022-03-11 00:57:15', '2022-03-11 00:57:15'),
-(10, 1, 32, 2, '2022-03-12 00:57:15', '2022-03-11 00:57:15'),
-(11, 1, 1, 1, '2022-03-12 00:57:46', '2022-03-11 00:57:46'),
-(12, 2, 24, 4, '2022-03-12 00:57:46', '2022-03-11 00:57:46');
 
 -- --------------------------------------------------------
 
@@ -116,8 +106,8 @@ CREATE TABLE `martech_departamentos` (
 --
 
 INSERT INTO `martech_departamentos` (`id`, `planta_id`, `nombre`, `active`, `otro`, `desired_output`) VALUES
-(1038, 1005, 'Duralock side B', 1, 0, 148),
-(1037, 1005, 'Duralock Side A ', 1, 0, 301);
+(1038, 1005, 'Duralock side B', 1, 0, 150),
+(1037, 1005, 'Duralock Side A ', 1, 0, 300);
 
 -- --------------------------------------------------------
 
