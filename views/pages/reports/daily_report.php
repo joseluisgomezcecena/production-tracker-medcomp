@@ -148,6 +148,7 @@
                                 $query = "SELECT * FROM item_counter 
                                 LEFT JOIN martech_departamentos ON martech_departamentos.id = item_counter.site_id 
                                 WHERE item_counter.date_create BETWEEN '$today 00:00:00' AND '$today 23:59:59' 
+                                AND item_counter.site_id = 1037 
                                 GROUP BY time_slot ORDER BY time_slot";
 
                             }
@@ -241,6 +242,7 @@
                         $query = "SELECT * FROM item_counter 
                                 LEFT JOIN martech_departamentos ON martech_departamentos.id = item_counter.site_id 
                                 WHERE item_counter.date_create BETWEEN '$today 00:00:00' AND '$today 23:59:59' 
+                                AND item_counter.site_id = 1038  
                                 GROUP BY time_slot ORDER BY time_slot";
 
                     }
