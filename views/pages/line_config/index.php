@@ -18,7 +18,7 @@
 
         <div class="flex flex-wrap gap-2 items-center ltr:ml-auto rtl:mr-auto mt-5 lg:mt-0">
 
-            <!-- Layout -->
+            <!-- Layout
             <div class="flex gap-x-2">
                 <a href="#" class="btn btn-icon btn-icon_large btn_outlined btn_primary">
                     <span class="la la-bars"></span>
@@ -31,8 +31,8 @@
                     <span class="la la-th-large"></span>
                 </a>
             </div>
-
-            <!-- Search -->
+            -->
+            <!-- Search
             <form class="flex flex-auto items-center" action="#">
                 <label class="form-control-addon-within rounded-full">
                     <input type="text" class="form-control border-none" placeholder="Search">
@@ -40,7 +40,7 @@
                             class="btn btn-link text-gray-300 dark:text-gray-700 dark:hover:text-primary text-xl leading-none la la-search ltr:mr-4 rtl:ml-4"></button>
                 </label>
             </form>
-
+            -->
             <div class="flex gap-x-2">
 
                 <!-- Sort By -->
@@ -55,8 +55,9 @@
                     </div>
                 </div>
 
-                <!-- Add New -->
+                <!-- Add New
                 <button class="btn btn_primary uppercase">Add New</button>
+                -->
             </div>
         </div>
     </section>

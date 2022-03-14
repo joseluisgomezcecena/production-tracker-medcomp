@@ -40,7 +40,7 @@ include_once ("views/includes/auth-header.php");
 
     <div class="w-full md:w-1/2 xl:w-1/3">
         <div class="mx-5 md:mx-10">
-            <h2 class="uppercase">It’s Great To See You!</h2>
+            <h2 class="uppercase">Production Tracker </h2>
             <h4 class="uppercase">Login Here</h4>
         </div>
         <form method="post" class="card mt-5 p-5 md:p-10">
@@ -61,7 +61,7 @@ include_once ("views/includes/auth-header.php");
                 </label>
             </div>
             <div class="flex items-center">
-                <a href="auth-forgot-password.html" class="text-sm uppercase">Forgot Password?</a>
+                <a href="#" class="text-sm uppercase">Forgot Password?</a>
                 <button type="submit" name="login" class="btn btn_primary ltr:ml-auto rtl:mr-auto uppercase">Login</button>
             </div>
         </form>

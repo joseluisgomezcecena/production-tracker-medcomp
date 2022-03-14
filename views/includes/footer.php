@@ -1,7 +1,7 @@
 <!-- Footer -->
 <footer class="mt-auto">
     <div class="footer">
-        <span class='uppercase'>&copy; 2022 Yeti Themes</span>
+        <span class='uppercase'><?php echo date("Y") ?> Continuous improvement Software.</span>
         <nav>
             <a href="mailto:Yeti Themes<info@yetithemes.net>?subject=Support">Support</a>
             <span class="divider">|</span>
@@ -32,6 +32,24 @@
 <script>
     $(document).ready(function() {
         $('#example').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        } );
+    } );
+
+    $(document).ready(function() {
+        $('#site-a').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        } );
+    } );
+
+    $(document).ready(function() {
+        $('#site-b').DataTable( {
             dom: 'Bfrtip',
             buttons: [
                 'copy', 'csv', 'excel', 'pdf', 'print'

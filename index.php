@@ -22,6 +22,10 @@ if ($login->isUserLoggedIn() == true)
             include("views/pages/reports/daily_report.php");
             break;
 
+        case "settings":
+            include("views/pages/settings/settings.php");
+            break;
+
         default:
             include("views/pages/home/index.php");
             break;
