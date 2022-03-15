@@ -80,9 +80,19 @@
 <?php
 //getting data
 $year = date("Y");
-$query = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-03-01' AND '$year-03-30')  AND site_id=1;";
-$run = mysqli_query($connection, $query);
-$row = mysqli_fetch_array($run);
+
+$query_mar = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-03-01' AND '$year-03-30')  AND site_id=1037;";
+$run_mar = mysqli_query($connection, $query_mar);
+$row_mar = mysqli_fetch_array($run_mar);
+
+$query_apr = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-03-01' AND '$year-03-30')  AND site_id=1037;";
+$run_apr = mysqli_query($connection, $query_apr);
+$row_apr = mysqli_fetch_array($run_apr);
+
+$query_may = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-03-01' AND '$year-03-30')  AND site_id=1037;";
+$run_may = mysqli_query($connection, $query_may);
+$row_may = mysqli_fetch_array($run_may);
+
 
 ?>
 
@@ -97,7 +107,7 @@ $row = mysqli_fetch_array($run);
             labels: ["Jan",	"Feb",	"Mar",	"Apr",	"May",	"Jun",	"Jul","Aug",	"Sep","Oct", "Nov", "Dec"],
             datasets: [{
                 label: 'Side A', // Name the series
-                data: [0,	0,	<?php echo $row[0] ?>,	0,	0,	0,	0,	0,	0, 0], // Specify the data values array
+                data: [0,	0,	<?php echo $row_mar[0] ?>,	<?php echo $row_apr[0] ?>,	<?php echo $row_may[0] ?>,	0,	0,	0,	0, 0], // Specify the data values array
                 fill: true,
                 borderColor: '#2196f3', // Add custom color border (Line)
                 backgroundColor: 'rgba(33,150,243,0.78)', // Add custom color background (Points and Fill)
