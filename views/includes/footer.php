@@ -85,11 +85,11 @@ $query_mar = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE 
 $run_mar = mysqli_query($connection, $query_mar);
 $row_mar = mysqli_fetch_array($run_mar);
 
-$query_apr = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-03-01' AND '$year-03-30')  AND site_id=1037;";
+$query_apr = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-04-01' AND '$year-04-30')  AND site_id=1037;";
 $run_apr = mysqli_query($connection, $query_apr);
 $row_apr = mysqli_fetch_array($run_apr);
 
-$query_may = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-03-01' AND '$year-03-30')  AND site_id=1037;";
+$query_may = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-05-01' AND '$year-05-30')  AND site_id=1037;";
 $run_may = mysqli_query($connection, $query_may);
 $row_may = mysqli_fetch_array($run_may);
 
