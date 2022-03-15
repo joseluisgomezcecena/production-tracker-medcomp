@@ -20,7 +20,7 @@ else
  *  DATABASE CONNECTION
  */
 const DB_HOST = "localhost";
-const DB_NAME = "production_tracker";
+const DB_NAME = "andon_pa";
 const DB_USER = "root";
 const DB_PASS = "";
 
