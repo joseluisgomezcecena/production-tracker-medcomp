@@ -71,7 +71,29 @@ require_once ("functions/mail.php");
                 <div>
                     <span class="text-primary text-5xl leading-none la la-project-diagram"></span>
                     <p class="mt-2">Duralock Side B</p>
-                    <div class="text-primary mt-5 text-3xl leading-none">0</div>
+                    <div class="text-primary mt-5 text-3xl leading-none">
+                        <?php
+                        $today = date("Y-m-d");
+                        $query_b = "SELECT SUM(count) FROM item_counter 
+                        WHERE 
+                        site_id= 1038 
+                        AND date_create BETWEEN '$today 00:00:00' AND '$today 23:59:59'; ";
+
+                        $result_b = mysqli_query($connection, $query_b);
+
+                        $row_b = mysqli_fetch_array($result_b);
+
+                        $side_b = $row_b[0];
+                        if($side_b == NULL)
+                        {
+                            $side_b = "0";
+                        }
+
+                        echo $side_b;
+
+
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
