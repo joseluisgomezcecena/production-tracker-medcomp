@@ -244,11 +244,32 @@ require_once ("functions/mail.php");
     //getting data
     $year = date("Y");
 
-    $query_mar = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-03-01' AND '$year-03-30')  AND site_id=1037;";
+    $jan_end = cal_days_in_month(CAL_GREGORIAN,1,$year);
+    $feb_end = cal_days_in_month(CAL_GREGORIAN,2,$year);
+    $march_end = cal_days_in_month(CAL_GREGORIAN,3,$year);
+    $apr_end = cal_days_in_month(CAL_GREGORIAN,4,$year);
+    $may_end = cal_days_in_month(CAL_GREGORIAN,5,$year);
+    $jun_end = cal_days_in_month(CAL_GREGORIAN,6,$year);
+    $jul_end = cal_days_in_month(CAL_GREGORIAN,7,$year);
+    $aug_end = cal_days_in_month(CAL_GREGORIAN,8,$year);
+    $sept_end = cal_days_in_month(CAL_GREGORIAN,9,$year);
+    $oct_end = cal_days_in_month(CAL_GREGORIAN,10,$year);
+    $nov_end = cal_days_in_month(CAL_GREGORIAN,11,$year);
+    $dec_end = cal_days_in_month(CAL_GREGORIAN,12,$year);
+
+    $query_mar = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-01-01' AND '$year-01-$jan_end')  AND site_id=1037;";
     $run_mar = mysqli_query($connection, $query_mar);
     $row_mar = mysqli_fetch_array($run_mar);
 
-    $query_apr = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-04-01' AND '$year-04-30')  AND site_id=1037;";
+    $query_mar = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-02-01' AND '$year-02-$feb_end')  AND site_id=1037;";
+    $run_mar = mysqli_query($connection, $query_mar);
+    $row_mar = mysqli_fetch_array($run_mar);
+
+    $query_mar = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-03-01' AND '$year-03-$march_end')  AND site_id=1037;";
+    $run_mar = mysqli_query($connection, $query_mar);
+    $row_mar = mysqli_fetch_array($run_mar);
+
+    $query_apr = "SELECT SUM(count), date_create, site_id FROM `item_counter` WHERE (date_create BETWEEN '$year-04-01' AND '$year-04-$apr_end')  AND site_id=1037;";
     $run_apr = mysqli_query($connection, $query_apr);
     $row_apr = mysqli_fetch_array($run_apr);
 
